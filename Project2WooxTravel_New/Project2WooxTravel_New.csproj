@@ -658,6 +658,7 @@
     <Content Include="wooxtravel-1.0.0\assets\css\flex-slider.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\fontawesome.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\owl.css" />
+    <Content Include="wooxtravel-1.0.0\assets\css\popupModal.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\templatemo-woox-travel.css" />
     <Content Include="wooxtravel-1.0.0\assets\images\about-content-bg.jpg" />
     <Content Include="wooxtravel-1.0.0\assets\images\about-left-image.jpg" />

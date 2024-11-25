@@ -61,7 +61,7 @@ namespace Project2WooxTravel_New.Controllers
         {
             context.Reservations.Add(reservation);
             context.SaveChanges();
-            return View();
+            return View("Index");
         }
 
     }
