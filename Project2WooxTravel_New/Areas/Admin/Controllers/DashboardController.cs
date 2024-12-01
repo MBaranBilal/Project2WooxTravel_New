@@ -37,6 +37,18 @@ namespace Project2WooxTravel_New.Areas.Admin.Controllers
             var peopleCount=context.Reservations.Sum(x=>x.PersonCount);
             ViewBag.PeopleCount = peopleCount;
 
+            var averagePeople = peopleCount / reservationCount;
+            ViewBag.AveragePeople = averagePeople;
+
+            var averageMessage= messsageCount/adminCount;
+            ViewBag.AverageMessage = averageMessage;
+
+            var dayNightgreaterfive = context.Destinations.Where(x => x.DayNight > 5).Count();
+            ViewBag.DayNightgreaterfive= dayNightgreaterfive;
+
+            var dayNightlessfive = destinationCount - dayNightgreaterfive;
+            ViewBag.DayNightlessfive= dayNightlessfive;
+
             return View();
         }
     }
