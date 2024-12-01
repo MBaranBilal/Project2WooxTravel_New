@@ -7,7 +7,7 @@
 
 <div class="container">
     <div class="page-inner">
-        <div class="page-header">
+        @*<div class="page-header">
             <h3 class="fw-bold mb-3">Tables</h3>
             <ul class="breadcrumbs mb-3">
                 <li class="nav-home">
@@ -28,7 +28,7 @@
                     <a href="#">Basic Tables</a>
                 </li>
             </ul>
-        </div>
+        </div>*@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -36,9 +36,6 @@
                         <div class="card-title">Kategori İşlemleri</div>
                     </div>
                     <div class="card-body">
-                        <div class="card-sub">
-                            
-                        </div>
                         <table class="table mt-3">
                             <thead>
 
@@ -55,17 +52,16 @@
                                     <tr>
                                         <td>@item.CategoryId</td>
                                         <td>@item.CategoryName</td>
-                                        <td><a href="#" class="btn btn-danger">Sil</a></td>
-                                        <td><a href="#" class="btn btn-success">Güncelle</a></td>            
+                                        <td><a href="/Admin/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Admin/Category/UpdateCategory/@item.CategoryId" class="btn btn-warning">Güncelle</a></td>
                                     </tr>
                                 }
                             </tbody>
                         </table>
                     </div>
                 </div>
-
+                <a href="/Admin/Category/NewCategory/" class="btn btn-primary">Yeni Kategori Ekle</a>
             </div>
-
         </div>
     </div>
 </div>

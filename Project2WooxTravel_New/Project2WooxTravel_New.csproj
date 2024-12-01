@@ -136,6 +136,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\DestinationController.cs" />
     <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
@@ -657,6 +658,7 @@
     <Content Include="wooxtravel-1.0.0\assets\css\Blur.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\flex-slider.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\fontawesome.css" />
+    <Content Include="wooxtravel-1.0.0\assets\css\Login.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\owl.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\popupModal.css" />
     <Content Include="wooxtravel-1.0.0\assets\css\templatemo-woox-travel.css" />
@@ -707,6 +709,10 @@
     <Content Include="Areas\Admin\Views\Message\Inbox.cshtml" />
     <Content Include="Areas\Admin\Views\Message\Sendbox.cshtml" />
     <Content Include="Areas\Admin\Views\Message\SendMessage.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\OpenMessage.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\NewCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

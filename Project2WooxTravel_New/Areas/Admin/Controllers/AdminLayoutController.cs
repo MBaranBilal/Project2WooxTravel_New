@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project2WooxTravel_New.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Project2WooxTravel_New.Areas.Admin.Controllers
 {
     public class AdminLayoutController : Controller
     {
+        TravelContext context=new TravelContext();
         // GET: Admin/AdminLayout
         public ActionResult Index()
         {
@@ -26,7 +28,8 @@ namespace Project2WooxTravel_New.Areas.Admin.Controllers
 
         public PartialViewResult PartialNavbar()
         {
-            return PartialView();
+            var values = context.Messages.OrderByDescending(x => x.MessageID).Take(4).ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialFooter() 

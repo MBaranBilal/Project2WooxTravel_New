@@ -37,22 +37,20 @@
                                 {
                                     count++;
                                     <tr>
-                                        <td>count</td>
+                                        <td>@count</td>
                                         <td>@item.SenderMail</td>
                                         <td>@item.Subject</td>
                                         <td>@item.SendDate.ToShortDateString()</td>
                                         <td>@item.IsRead</td>
-                                        <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
+                                        <td><a href="/Admin/Message/OpenMessage/@item.MessageID" class="btn btn-warning">Mesajı Aç</a></td>
                                     </tr>
                                 }
                             </tbody>
                         </table>
-                        <a href="/Admin/Destination/CreateDestination/" class="btn btn-primary">Yeni Mesaj Gönderin</a>
+                        <a href="/Admin/Message/SendMessage/" class="btn btn-primary">Yeni Mesaj Gönderin</a>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>

@@ -1,4 +1,8 @@
-﻿@model List<Project2WooxTravel_New.Entities.Destination>
+﻿@*@model List<Project2WooxTravel_New.Entities.Destination>*@
+@using Project2WooxTravel_New.Entities
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Destination>
 @{
     ViewBag.Title = "DestinationList";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
@@ -6,7 +10,7 @@
 
 <div class="container">
     <div class="page-inner">
-        
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -42,18 +46,19 @@
                                         <td>@item.Price</td>
                                         <td><a href="/Admin/Destination/DeleteDestination/@item.DestinationId" class="btn btn-danger">Sil</a></td>
                                         <td><a href="/Admin/Destination/UpdateDestination/@item.DestinationId" class="btn btn-success">Güncelle</a></td>
-                                        <td><a href="#" class="btn btn-warning">Sitede Gör</a></td>
+                                        <td><a href="/Default/DestinationDetail/@item.DestinationId" class="btn btn-warning">Sitede Gör</a></td>
                                     </tr>
                                 }
                             </tbody>
+
                         </table>
                         <a href="/Admin/Destination/CreateDestination/" class="btn btn-primary">Yeni Destinasyon Girişi</a>
                     </div>
                 </div>
-
+                @Html.PagedListPager((IPagedList)Model, p => Url.Action("DestinationList", new { p }))
             </div>
 
         </div>
     </div>
 </div>
-
+<link href="~/Content/PagedList.css" rel="stylesheet" />

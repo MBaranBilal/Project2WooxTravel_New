@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using Project2WooxTravel_New.Context;
 using Project2WooxTravel_New.Entities;
 
@@ -13,10 +14,10 @@ namespace Project2WooxTravel_New.Areas.Admin.Controllers
     {
         // GET: Admin/Destination
         TravelContext context = new TravelContext();
-        public ActionResult DestinationList()
+        public ActionResult DestinationList(int p=1)
         {
-            var values = context.Destinations.ToList();
-            return View(values);
+            var values = context.Destinations.ToList().ToPagedList(p, 5);
+            return PartialView(values);
         }
         //Default olarak [HttpGet] etiketiyle gelir.
         public ActionResult CreateDestination()

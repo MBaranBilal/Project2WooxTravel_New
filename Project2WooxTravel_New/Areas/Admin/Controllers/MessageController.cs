@@ -45,5 +45,15 @@ namespace Project2WooxTravel_New.Areas.Admin.Controllers
             context.SaveChanges();
             return RedirectToAction("Sendbox", "Message", new {area="Admin"});
         }
+
+        public ActionResult OpenMessage(int id)
+        {
+            ViewBag.SenderMail = context.Messages.Where(x => x.MessageID == id).Select(x => x.SenderMail).FirstOrDefault();
+            ViewBag.Subject=context.Messages.Where(x=>x.MessageID==id).Select(x => x.Subject).FirstOrDefault();
+            ViewBag.Content=context.Messages.Where(x=>x.MessageID==id).Select(x=>x.Content).FirstOrDefault();
+            ViewBag.Date=context.Messages.Where(x=>x.MessageID==id).Select(x=>x.SendDate).FirstOrDefault();
+            return View();
+        }
+
     }
 }
