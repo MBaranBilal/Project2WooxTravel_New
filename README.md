@@ -25,7 +25,6 @@
   - **Araçlar** bölümünde çeşitli widget'lar görüntülenebilir.
   - **Mesajlaşma Modülü** ile adminler arası iletişim mümkündür.
 - **3D kredi kartı tasarımı** ile ödeme simülasyonu yapılabilir:
-  - Kart numarasına göre arka plan rengi değişir.
 
 ---
 
